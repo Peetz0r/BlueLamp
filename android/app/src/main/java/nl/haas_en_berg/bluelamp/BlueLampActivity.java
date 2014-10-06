@@ -207,10 +207,10 @@ public class BlueLampActivity extends Activity {
                             byte[] color = new byte[3];
                             int num_bytes = btInputStream.read(color);
                             if (num_bytes == 3) {
-                                Log.i(TAG, "Got three bytes. Red: " + String.valueOf(color[0] & 0xff) + "\tGreen: " + String.valueOf(color[1] & 0xff) + "\tBlue: " + String.valueOf(color[2] & 0xff));
+                                Log.d(TAG, "Got three bytes. Red: " + String.valueOf(color[0] & 0xff) + "\tGreen: " + String.valueOf(color[1] & 0xff) + "\tBlue: " + String.valueOf(color[2] & 0xff));
                                 result = Color.rgb(color[0] & 0xff, color[1] & 0xff, color[2] & 0xff);
                             } else {
-                                Log.e(TAG, "could not read exactly 3 bytes during checkColor.");
+                                Log.d(TAG, "could not read exactly 3 bytes during checkColor.");
                             }
                             return true;
                         } catch (IOException e) {
