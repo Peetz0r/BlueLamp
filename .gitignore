@@ -57,3 +57,8 @@ arduino/lib/
 *.exe
 *.out
 *.app
+
+# Eagle backups
+*.s#?
+*.b#?
+*.l#?
