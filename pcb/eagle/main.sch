@@ -369,12 +369,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="A7" x="4.7625" y="-6.50875" drill="1.016" diameter="1.8796"/>
 <pad name="A5" x="4.7625" y="3.96875" drill="1.016" diameter="1.8796"/>
 <pad name="A4" x="4.7625" y="1.42875" drill="1.016" diameter="1.8796"/>
-<pad name="BLK" x="-6.35" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="GND" x="-3.81" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="VCC" x="-1.27" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="RXI" x="1.27" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="TXO" x="3.81" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="GRN" x="6.35" y="15.24" drill="1.016" diameter="1.8796"/>
 </package>
 </packages>
 <symbols>
