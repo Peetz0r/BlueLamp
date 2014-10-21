@@ -13,8 +13,8 @@ detect_indent_width=false
 indent_mode=2
 
 [project]
-name=rgb-lamp
-base_path=/home/peter/rgb-lamp/
+name=BlueLamp
+base_path=/home/peter/BlueLamp/arduino/
 description=
 
 [long line marker]
@@ -23,20 +23,19 @@ long_line_column=144
 
 [files]
 current_page=0
-FILE_NAME_0=875;C;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2Frgb-lamp%2Fsrc%2Fsketch.ino;0;4
-FILE_NAME_1=23;Conf;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2Frgb-lamp%2Fino.ini;0;4
+FILE_NAME_0=0;C;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2FBlueLamp%2Farduino%2Fsrc%2Fsketch.ino;0;4
 
 [VTE]
-last_dir=/home/peter/rgb-lamp/src
+last_dir=/home/peter/BlueLamp/arduino/src
 
 [build-menu]
 EX_00_LB=Uitvo_eren
 EX_00_CM=ino serial
-EX_00_WD=/home/peter/rgb-lamp
+EX_00_WD=/home/peter/BlueLamp/arduino
 CFT_00_LB=Compileer
 CFT_00_CM=ino build
-CFT_00_WD=/home/peter/rgb-lamp
+CFT_00_WD=/home/peter/BlueLamp/arduino
 CFT_01_LB=B_ouwen
 CFT_01_CM=ino upload
-CFT_01_WD=/home/peter/rgb-lamp
+CFT_01_WD=/home/peter/BlueLamp/arduino
 filetypes=C;

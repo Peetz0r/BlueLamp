@@ -44,10 +44,6 @@ void loop()  {
 		blue1  = color[2];
 	}
 
-//	red2   += (make_better(red1)   - red2  ) / 40;
-//	green2 += (make_better(green1) - green2) / 40;
-//	blue2  += (make_better(blue1)  - blue2 ) / 40;
-
 	red2   += (red1   - red2  ) / 40;
 	green2 += (green1 - green2) / 40;
 	blue2  += (blue1  - blue2 ) / 40;
@@ -64,9 +60,4 @@ void loop()  {
 		Serial.write(green1);
 		Serial.write(blue1 );
 	}
-}
-
-float make_better(int x) {
-	float pi = 3.14;
-	return 127.5+127.5*sin((x-127.5)/(255)*pi);
 }
