@@ -22,11 +22,12 @@ long_line_behaviour=1
 long_line_column=144
 
 [files]
-current_page=0
-FILE_NAME_0=0;C;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2FBlueLamp%2Farduino%2Fsrc%2Fsketch.ino;0;4
+current_page=1
+FILE_NAME_0=167;C;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2FBlueLamp%2Farduino%2Fsrc%2Fsketch%2Fsketch.ino;0;4
+FILE_NAME_1=23;Conf;0;EUTF-8;1;1;0;%2Fhome%2Fpeter%2FBlueLamp%2Farduino%2Fino.ini;0;4
 
 [VTE]
-last_dir=/home/peter/BlueLamp/arduino/src
+last_dir=/tmp
 
 [build-menu]
 EX_00_LB=Uitvo_eren

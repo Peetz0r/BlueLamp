@@ -23,14 +23,6 @@ void setup()  {
     analogWrite(pin_red,   0);
     analogWrite(pin_green, 0);
     analogWrite(pin_blue,  0);
-
-/*
-    Serial.print("AT+VERSION");
-    delay(1200);
-    Serial.print("AT+NAMEPrototype 1");
-    delay(1200);
-    Serial.print("AT+PIN1234");
-*/
 }
 
 void loop()  {
