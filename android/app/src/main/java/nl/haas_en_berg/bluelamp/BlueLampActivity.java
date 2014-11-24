@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -92,20 +93,7 @@ public class BlueLampActivity extends Activity {
                 picker.setOldCenterColor(color);
             } catch (IOException e) {
                 Log.e(TAG, "error sending data: " + e.getMessage());
-                Log.i(TAG, "closing streams");
-                try {
-                    btSocket.getInputStream().close();
-                    btSocket.getOutputStream().close();
-                } catch (IOException e1) {
-                    Log.e(TAG, "cannot close streams");
-                }
-                Log.i(TAG, "closing socket");
-                try {
-                    btSocket.close();
-                } catch (IOException e1) {
-                    Log.e(TAG, "cannot close socket");
-                }
-                toggle.setChecked(false);
+                closeBtConnection();
             }
             Log.i(TAG, "User tapped OK. Red: " + String.valueOf(Color.red(color)) + "\tGreen: " + String.valueOf(Color.green(color)) + "\tBlue: " + String.valueOf(Color.blue(color)));
         }
@@ -114,31 +102,39 @@ public class BlueLampActivity extends Activity {
 
     public void performStart(View view) {
         if (toggle.isChecked()) {
-            toggle.setChecked(false);
-            HashMap<String, String> map = (HashMap<String, String>) spinner.getSelectedItem();
-            if (map != null) {
-                toggle.setEnabled(false);
-                address = map.get("address");
-                Log.i(TAG, "Connecting to " + address);
-                new BTConnectTask().execute();
-            }
+            openBtConnection();
         } else {
-            if (btSocket != null) {
-                Log.i(TAG, "closing streams");
-                try {
-                    btSocket.getInputStream().close();
-                    btSocket.getOutputStream().close();
-                } catch (IOException e1) {
-                    Log.e(TAG, "cannot close streams");
-                }
-                Log.i(TAG, "closing socket");
-                try {
-                    btSocket.close();
-                } catch (IOException e1) {
-                    Log.e(TAG, "cannot close socket");
-                }
-                toggle.setChecked(false);
+            closeBtConnection();
+        }
+    }
+
+    private void openBtConnection() {
+        toggle.setChecked(false);
+        HashMap<String, String> map = (HashMap<String, String>) spinner.getSelectedItem();
+        if (map != null) {
+            toggle.setEnabled(false);
+            address = map.get("address");
+            Log.i(TAG, "Connecting to " + address);
+            new BTConnectTask().execute();
+        }
+    }
+
+    private void closeBtConnection() {
+        if (btSocket != null) {
+            Log.i(TAG, "closing streams");
+            try {
+                btSocket.getInputStream().close();
+                btSocket.getOutputStream().close();
+            } catch (IOException e1) {
+                Log.e(TAG, "cannot close streams");
             }
+            Log.i(TAG, "closing socket");
+            try {
+                btSocket.close();
+            } catch (IOException e1) {
+                Log.e(TAG, "cannot close socket");
+            }
+            toggle.setChecked(false);
         }
     }
 
@@ -310,5 +306,17 @@ public class BlueLampActivity extends Activity {
         SimpleAdapter adapter = new SimpleAdapter(this, spinnerArray, android.R.layout.simple_list_item_2, new String[]{"name", "address"}, new int[]{android.R.id.text1, android.R.id.text2});
         spinner.setAdapter(adapter);
         spinner.setSelection(position);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                closeBtConnection();
+                openBtConnection();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 }
