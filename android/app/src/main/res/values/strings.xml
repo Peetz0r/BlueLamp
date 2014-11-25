@@ -3,4 +3,14 @@
 
     <string name="app_name">BlueLamp</string>
 
+    <string name="not_connected">Not connected</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+
+    <string name="zero_devices_dialog_title">No Bluetooth devices</string>
+    <string name="zero_devices_dialog_text">Your device is not yet connected to any Bluetooth lamp yet. You can do this in your device settings. Do you want to do this now?</string>
+
+    <string name="unsupported_dialog_title">No Bluetooth support</string>
+    <string name="unsupported_dialog_text">Your device does not support Bluetooth. There\'s nothing we can do.</string>
+    <string name="unsupported_text">Your device does not support Bluetooth. There\'s nothing we can do.</string>
 </resources>

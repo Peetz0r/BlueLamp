@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="not_connected">Niet verbonden</string>
+    <string name="connected">Verbonden</string>
+    <string name="connecting">Bezig</string>
+
+    <string name="zero_devices_dialog_title">Geen Bluetooth apparaten</string>
+    <string name="zero_devices_dialog_text">Jouw apparaat is nog niet gekoppeld met een Bluetooth lamp. Dit kan je doen in de instellingen van je apparaat. Wil je dit nu doen?</string>
+
+    <string name="unsupported_dialog_title">Geen Bluetooth</string>
+    <string name="unsupported_dialog_text">Jouw apparaat ondersteunt geen Bluetooth. Er is niks dat wij kunnen doen.</string>
+    <string name="unsupported_text">Jouw apparaat ondersteunt geen Bluetooth. Er is niks dat wij kunnen doen.</string>
+</resources>
