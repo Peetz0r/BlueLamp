@@ -39,7 +39,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-
 public class BlueLampActivity extends Activity {
 
     private static final String TAG = "BlueLampActivity";

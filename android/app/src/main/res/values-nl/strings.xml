@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">BlueLamp</string>
 
     <string name="not_connected">Niet verbonden</string>
     <string name="connected">Verbonden</string>

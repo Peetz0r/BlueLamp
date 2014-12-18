@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '20.0.0'
+    buildToolsVersion '21.0.0'
     defaultConfig {
         applicationId "nl.haas_en_berg.bluelamp"
         minSdkVersion 10
@@ -12,12 +12,12 @@ android {
     }
     buildTypes {
         release {
-            runProguard true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            zipAlign true
+            zipAlignEnabled true
         }
         debug {
-            runProguard false
+            minifyEnabled false
         }
     }
     productFlavors {
