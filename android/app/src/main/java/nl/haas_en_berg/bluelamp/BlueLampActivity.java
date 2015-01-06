@@ -71,21 +71,6 @@ public class BlueLampActivity extends Activity {
         picker = (ColorPicker) findViewById(R.id.picker);
         picker.addSaturationBar((SaturationBar) findViewById(R.id.saturationbar));
         picker.addValueBar((ValueBar) findViewById(R.id.valuebar));
-
-        Signature[] sigs = new Signature[0];
-        try {
-            byte[] cert_sha1 = MessageDigest.getInstance("SHA1").digest(getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES).signatures[0].toByteArray());
-            byte[] peetz0r_sha1 = {(byte) 0x63, (byte) 0x1A, (byte) 0x40, (byte) 0x98, (byte) 0x51, (byte) 0xE9, (byte) 0x97, (byte) 0x86, (byte) 0x48, (byte) 0x86, (byte) 0x40, (byte) 0x88, (byte) 0x50, (byte) 0xF6, (byte) 0x9B, (byte) 0x44, (byte) 0x29, (byte) 0x24, (byte) 0x90, (byte) 0x9F};
-            TextView bottom_text = (TextView) findViewById(R.id.bottom_text);
-            if (Arrays.equals(cert_sha1, peetz0r_sha1)) {
-                bottom_text.setText("Gecompiled door Peter Hazenberg");
-            } else {
-                // Als je je eigen naam in beeld wilt hebben, gebruik dan de volgende regel:
-                //bottom_text.setText("Gecompiled door JOUW NAAM");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void updateColor(View view) {
