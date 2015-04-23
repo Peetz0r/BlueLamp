@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion '21.0.0'
+    buildToolsVersion '22.0.0'
     defaultConfig {
         applicationId "nl.haas_en_berg.bluelamp"
         minSdkVersion 10
         targetSdkVersion 22
-        versionCode 5
-        versionName "1.21"
+        versionCode 6
+        versionName "1.22"
     }
     buildTypes {
         release {
